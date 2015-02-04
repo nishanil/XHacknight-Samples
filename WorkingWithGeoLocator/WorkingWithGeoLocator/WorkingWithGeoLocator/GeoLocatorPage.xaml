@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithGeoLocator.GeoLocatorPage">
+
+  <ContentPage.Content>
+  <StackLayout>
+    <Button Text="Get Position" Command="{Binding GetPositionCommand}" />
+    <Entry Text="{Binding PositionStatus}" />
+    <Entry Text="{Binding PositionLatitude}" />
+    <Entry Text="{Binding PositionLongitude}" />
+    
+  </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
