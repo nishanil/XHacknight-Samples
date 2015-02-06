@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WorkingWithCamera.ViewModel;
 using Xamarin.Forms;
 
-namespace GeoCode
+namespace WorkingWithCamera
 {
-    public partial class GeoLocatePage : ContentPage
+    public partial class CameraPage : ContentPage
     {
-        public GeoLocatePage()
+        public CameraPage()
         {
             InitializeComponent();
+            this.BindingContext = new CameraViewModel();
         }
     }
 }
