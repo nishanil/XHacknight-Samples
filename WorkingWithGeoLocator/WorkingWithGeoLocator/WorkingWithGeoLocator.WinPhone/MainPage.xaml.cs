@@ -7,6 +7,8 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Xamarin.Forms;
+using XLabs.Platform.Services.GeoLocation;
 
 namespace WorkingWithGeoLocator.WinPhone
 {
@@ -18,6 +20,7 @@ namespace WorkingWithGeoLocator.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             global::Xamarin.Forms.Forms.Init();
+			DependencyService.Register<IGeolocator, Geolocator>();
             LoadApplication(new WorkingWithGeoLocator.App());
         }
     }

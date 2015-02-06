@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
+using XLabs.Platform.Services.GeoLocation;
+using XLabs.Platform.Services.Geolocation;
 
 namespace WorkingWithGeoLocator.Droid
 {
@@ -17,6 +20,7 @@ namespace WorkingWithGeoLocator.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+			DependencyService.Register<IGeolocator, Geolocator>();
             LoadApplication(new App());
         }
     }
